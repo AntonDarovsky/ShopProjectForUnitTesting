@@ -18,7 +18,7 @@ namespace ConsoleInteraction
             Discount_5 discount5 = new Discount_5();
 
             ValueCalculator calculator = new ValueCalculator();
-
+            
             ShoppingCart cart1 = new ShoppingCart(discount1, calculator) { Products = products };
             ShoppingCart cart2 = new ShoppingCart(discount5, calculator) { Products = products };
 
