@@ -26,7 +26,7 @@ namespace ShopModelUnitTests
 
             decimal actualResult = cart.CalculateTotal();
 
-            Assert.AreEqual(59.4M, actualResult);
+            Assert.AreEqual(59.4M, actualResult, "Wrong price of the products");
             
         }
 
@@ -49,7 +49,7 @@ namespace ShopModelUnitTests
 
             decimal actualResult = cart.CalculateTotal();
 
-            Assert.AreNotEqual(59.8M, actualResult);
+            Assert.AreNotEqual(59.8M, actualResult, "Right price of the products");
 
         }
     }

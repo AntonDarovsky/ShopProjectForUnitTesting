@@ -21,7 +21,7 @@ namespace ShopModelUnitTests
 
             decimal actualResult = calculator.ValueCalc(products);
 
-            Assert.AreEqual(60, actualResult);
+            Assert.AreEqual(60, actualResult, "Wrong sum of the products");
         }
         
         [TestMethod]
@@ -39,7 +39,7 @@ namespace ShopModelUnitTests
 
             decimal actualResult = calculator.ValueCalc(products);
 
-            Assert.AreNotEqual(80, actualResult);
+            Assert.AreNotEqual(80, actualResult, "Right sum of the products");
         }
     }
 }

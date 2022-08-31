@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Core.Discounts;
+using System;
 
 namespace ShopModelUnitTests
 {
@@ -15,8 +16,11 @@ namespace ShopModelUnitTests
             Discount_5 discount = new Discount_5();
 
             decimal actualResult = discount.PercentageValue(50);
+           
+            Assert.AreEqual(47.5M, actualResult, "Wrong discount!");
 
-            Assert.AreEqual(47.5M, actualResult);
+          
+
         }
     }
 }

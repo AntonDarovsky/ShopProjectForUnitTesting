@@ -13,7 +13,7 @@ namespace ShopModelUnitTests
         {
             Product product = new Product();
            string actualResult = product.ToString();
-            Assert.AreEqual("".GetType(), actualResult.GetType());
+            Assert.AreEqual("".GetType(), actualResult.GetType(), "Result is not a string");
         }
 
         [TestMethod]
@@ -24,7 +24,7 @@ namespace ShopModelUnitTests
             Product product2 = new Product { ProductID = 1, Name = "Lays", Price = 20 };
 
             bool actualResult = product1.Equals(product2);
-            Assert.IsTrue(actualResult);
+            Assert.IsTrue(actualResult,"Products are not equal");
         }
 
         [TestMethod]
@@ -35,7 +35,7 @@ namespace ShopModelUnitTests
             Product product2 = new Product { ProductID = 2, Name = "Lays", Price = 40 };
 
             bool actualResult = product1.Equals(product2);
-            Assert.IsFalse(actualResult);
+            Assert.IsFalse(actualResult, "Products are equal");
         }
 
         [TestMethod]
@@ -48,7 +48,7 @@ namespace ShopModelUnitTests
 
             var actualResult = product1.GetHashCode();
 
-            Assert.AreEqual(product2.GetHashCode() , actualResult);
+            Assert.AreEqual(product2.GetHashCode() , actualResult, "Hash Code is not equal");
 
         }
 

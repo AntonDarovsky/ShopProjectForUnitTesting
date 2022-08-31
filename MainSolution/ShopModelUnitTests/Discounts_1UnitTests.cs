@@ -16,7 +16,7 @@ namespace ShopModelUnitTests
 
             decimal actualResult = discount.PercentageValue(50);
 
-            Assert.AreEqual(49.5M, actualResult);
+            Assert.AreEqual(49.5M, actualResult, "Wrong discount!");
         }
     }
 }
